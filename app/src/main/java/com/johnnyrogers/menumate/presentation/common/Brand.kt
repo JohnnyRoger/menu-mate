@@ -29,7 +29,7 @@ fun Brand(modifier: Modifier) {
         text = "Menu Mate",
         fontFamily = fontFamily,
         fontWeight = FontWeight.Bold,
-        fontSize = 18.sp,
+        fontSize = 16.sp,
         textAlign = TextAlign.Left,
         modifier = modifier,
     )

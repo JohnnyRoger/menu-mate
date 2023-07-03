@@ -13,4 +13,5 @@ val fontFamily = FontFamily(
     Font(R.font.nexa_light, FontWeight.Light),
     Font(R.font.nexa_regular, FontWeight.Normal),
     Font(R.font.nexa_xbold, FontWeight.ExtraBold),
+    Font(R.font.nighty, FontWeight.Medium),
 )

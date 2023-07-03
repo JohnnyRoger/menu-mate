@@ -20,14 +20,14 @@ private val DarkColorScheme = darkColorScheme(
     primary = Orange80,
     secondary = Green80,
     tertiary = Blue80,
-    background = Gray
+    background = Gray,
 
 )
 
 private val LightColorScheme = lightColorScheme(
     primary = Orange80,
-    secondary = Green40,
-    tertiary = Blue40,
+    secondary = Green80,
+    tertiary = Blue80,
     background = Color(0xFFFFFBFE),
 //    surface = Color(0xFFFFFBFE),
 //    onPrimary = Color.White,

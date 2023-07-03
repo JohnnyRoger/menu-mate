@@ -1,13 +1,10 @@
 package com.johnnyrogers.menumate.presentation.starter
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
@@ -33,7 +30,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import com.johnnyrogers.menumate.R
-import com.johnnyrogers.menumate.destinations.SetupScreenDestination
+import com.johnnyrogers.menumate.destinations.SigninScreenDestination
 import com.johnnyrogers.menumate.presentation.common.Brand
 import com.johnnyrogers.menumate.ui.theme.Orange80
 import com.johnnyrogers.menumate.ui.theme.fontFamily
@@ -78,8 +75,8 @@ fun StarterScreen(
                 append(": Where Menus Meet Convenience!")
             },
             fontFamily = fontFamily,
-            fontWeight = FontWeight.Black,
-            fontSize = 52.sp,
+            fontWeight = FontWeight.Medium,
+            fontSize = 82.sp,
             textAlign = TextAlign.Start,
             lineHeight = 52.sp,
             modifier = Modifier
@@ -91,13 +88,14 @@ fun StarterScreen(
         )
 
         Image(
-            painter = painterResource(id = R.drawable.illustration),
+            painter = painterResource(id = R.drawable.starter),
             contentDescription = "illustration",
             contentScale = ContentScale.Fit,
             modifier = Modifier
-                .width(400.dp)
+                .width(800.dp)
+                .padding(top = 40.dp, bottom = 40.dp)
                 .constrainAs(illustration) {
-                    top.linkTo(heading.bottom, 42.dp)
+                    top.linkTo(heading.bottom)
                     start.linkTo(parent.start)
                     end.linkTo(parent.end)
                 },
@@ -128,20 +126,20 @@ fun StarterScreen(
         )
         Button(
             onClick = {
-                navigator?.navigate(SetupScreenDestination)
+                navigator?.navigate(SigninScreenDestination)
             },
             colors = ButtonDefaults.textButtonColors(
                 containerColor = MaterialTheme.colorScheme.primary,
                 contentColor = Color.White,
             ),
-            shape = RoundedCornerShape(32.dp),
+            shape = RoundedCornerShape(38.dp),
             modifier = Modifier
-                .width(300.dp)
-                .height(65.dp)
+                .width(382.dp)
+                .height(72.dp)
                 .shadow(
-                    10.dp,
+                    8.dp,
                     spotColor = Orange80,
-                    shape = RoundedCornerShape(28.dp),
+                    shape = RoundedCornerShape(38.dp),
                 )
                 .constrainAs(button) {
                     top.linkTo(subheading.bottom)
@@ -151,10 +149,10 @@ fun StarterScreen(
                 },
         ) {
             Text(
-                text = "Let's Start",
+                text = "Let's Serve",
                 fontFamily = fontFamily,
-                fontWeight = FontWeight.Bold,
-                fontSize = 16.sp,
+                fontWeight = FontWeight.Medium,
+                fontSize = 22.sp,
             )
         }
     }
